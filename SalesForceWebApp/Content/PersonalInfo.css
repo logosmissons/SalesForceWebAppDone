@@ -1,0 +1,51 @@
+﻿.tdLabel {
+    text-align: left;
+    height: 35px;
+    width: 70px;
+    font-size: medium;
+    font-weight: normal;
+    padding: 0px;
+    /*border-color: lightgray;
+                    border-style: solid;
+                    border-width: 1px;*/
+}
+
+/*.tdTextBox {
+                    height: 35px;
+                    width: 300px;
+                    padding: 10px;
+                    border-color: lightgray;
+                    border-style: solid;
+                    border-width: 1px;
+                }*/
+
+/*.trElement {
+                    height: 30px;
+                    width: 250px;
+                    margin: 10px;
+                    padding: 10px;
+
+                    border-color: gray;
+                    border-style: solid;
+                    border-width: 1px;
+
+                }*/
+
+.modalBackground {
+    background-color: gray;
+    filter: alpha(opacity=50);
+    opacity: 0.7;
+}
+
+.pnlBackGround {
+    position: fixed;
+    font-size: small;
+    font-weight: normal;
+    top: 10%;
+    left: 10px;
+    width: 320px;
+    height: 150px;
+    text-align: center;
+    background-color: white;
+    border: solid 1px black;
+}

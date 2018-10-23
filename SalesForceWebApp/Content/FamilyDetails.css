@@ -1,0 +1,153 @@
+﻿.SpouseHeader {
+    height: 30px;
+    background-color: lightblue;
+}
+
+.ChildrenHeader {
+    height: 30px;
+    background-color: lightblue;
+}
+
+.pnlLabel {
+    height: 80px;
+    text-align: left;
+    font-size: small;
+    font-weight: normal;
+    float: left;
+    margin: 5px;
+}
+
+.TextBox {
+    font-weight: normal;
+    height: 23px;
+    margin-top: 3px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+.largeRadioButton input {
+    height: 20px;
+    width: 20px;
+    vertical-align: text-bottom;
+}
+
+.pnlBackGroundHidden {
+    position: fixed;
+    font-size: small;
+    font-weight: normal;
+    top: 250px;
+    left: 600px;
+    height: 390px;
+    width: 580px;
+    /*width: 320px;
+                height: 320px;*/
+    text-align: center;
+    background-color: white;
+    border: solid 1px black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+}
+
+.pnlBackGround {
+    position: fixed;
+    font-size: small;
+    font-weight: normal;
+    top: 300px;
+    left: 600px;
+    height: 850px;
+    width: 760px;
+    /*width: 320px;
+                height: 320px;*/
+    /*text-align: center;*/
+    align-content: center;
+    vertical-align: middle;
+    background-color: white;
+    border: solid 1px black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+}
+
+.pnlDlgBackGround {
+    position: fixed;
+    font-size: small;
+    font-weight: normal;
+    top: 300px;
+    left: 600px;
+    height: 150px;
+    width: 300px;
+    /*width: 320px;
+                height: 320px;*/
+    /*text-align: center;*/
+    align-content: center;
+    vertical-align: middle;
+    background-color: white;
+    border: solid 1px black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /*display: block;*/
+}
+
+.pnlDlgBackGroundHidden {
+    position: fixed;
+    font-size: small;
+    font-weight: normal;
+    top: 300px;
+    left: 600px;
+    height: 150px;
+    width: 300px;
+    /*width: 320px;
+                height: 320px;*/
+    /*text-align: center;*/
+    align-content: center;
+    vertical-align: middle;
+    background-color: white;
+    border: solid 1px black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: none;
+}
+
+.modalPopup {
+    background-color: #FFFFFF;
+    width: 300px;
+    border: 3px solid #0DA9D0;
+}
+
+    .modalPopup .header {
+        background-color: #2FBDF1;
+        height: 30px;
+        color: White;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .modalPopup .body {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        min-height: 50px;
+        line-height: 25px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .modalPopup .footer {
+        margin-top: 15px;
+        padding: 3px;
+    }
+
+.modalBackground {
+    background-color: Black;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}

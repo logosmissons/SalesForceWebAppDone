@@ -1,0 +1,172 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PersonalDetails.aspx.cs" Inherits="SalesForceWebApp.PersonalDetails" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <style type="text/css">
+
+            .topPanel {
+                /*position: absolute;
+                top: 0;
+                left: 0;*/
+                /*float: left;*/
+                /*width: 535px;
+                height: 500px;*/
+                font-size: medium;
+                font-weight: bold;
+                margin-top: 3px;
+                margin-left: 3px;
+                margin-right: 0px;
+                margin-bottom: 15px;
+            }
+
+
+            .pnlLabel {
+                font-family: Arial;
+                font-size: medium;
+                font-weight: bold; 
+                float: left;
+                margin-bottom: 0px;
+            }
+
+            .TextBox {
+                font-weight: normal;
+                height: 23px;
+                margin-top: 3px;
+                margin-left: 0px;
+                margin-bottom: 5px;
+            }
+
+            .DropDownList {
+                height: 30px;
+            }
+
+            .floatLeft {
+                float: left;
+                font-weight: normal;
+                margin-top: 3px;
+                margin-left: 3px;
+                margin-right: 3px;
+                margin-bottom: 3px;
+            }
+
+        </style>
+
+        <asp:ScriptManager ID="smPersonalDetails" runat="server"></asp:ScriptManager>
+        <div>
+
+            <div style="text-align: center; font-size: xx-large; font-weight: bolder; margin-top: 25px; margin-bottom: 10px;">
+                <p>The Christian Mutual Med-Aid</p>
+            </div>
+
+            <asp:Panel ID="pnlPersonalDetails" runat="server" HorizontalAlign="Center" BorderWidth="1px" BorderStyle="Solid" BorderColor="Gray" Width="780px" Height="550px" 
+                Font-Bold="true" Font-Size="X-Large" Style="vertical-align: top; margin-top: 20px; margin-left: auto; margin-right: auto; padding-top: 10px; padding-left: 30px; padding-right: 30px; ">
+
+                <div style="text-align: center; font-size: x-large; font-weight: bold; margin-top: 20px; margin-bottom: 35px; ">
+                    <p style="font-family: Arial;">Personal Details Page</p>
+                </div>
+
+                <asp:Panel ID="pnlEmail" runat="server" HorizontalAlign="Left" Height="70px" Width="760px" CssClass="floatLeft">
+                    <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtEmail" runat="server" CssClass="TextBox" Width="740px" Enabled="false"></asp:TextBox>
+                </asp:Panel>
+                <br />
+
+                <asp:Panel ID="pnlTitle" runat="server" HorizontalAlign="Left" Height="70px" Width="80px" CssClass="floatLeft">
+                    <asp:Label ID="lblTitle" runat="server" Text="Title" CssClass="pnlLabel"></asp:Label><br />
+                    <asp:DropDownList ID="ddlTitle" runat="server" CssClass="DropDownList" >
+                        <asp:ListItem Text="Jr." Value="0"></asp:ListItem>
+                        <asp:ListItem Text="Mr." Value="1"></asp:ListItem>
+                        <asp:ListItem Text="Mrs." Value="2"></asp:ListItem>
+                        <asp:ListItem Text="Ms." Value="3"></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                    </asp:DropDownList>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlLastName" runat="server" HorizontalAlign="Left" Height="70px" Width="250px" CssClass="floatLeft" >
+                    <asp:Label ID="lblLastName" runat="server" Text="Last Name" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtLastName" runat="server" CssClass="TextBox" Width="240px" ReadOnly="true" ></asp:TextBox>
+
+                </asp:Panel>
+
+                <asp:Panel ID="pnlFirstName" runat="server" HorizontalAlign="Left" Height="70px" Width="200px" CssClass="floatLeft" >
+                    <asp:Label ID="lblFirstName" runat="server" Text="First Name" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtFirstName" runat="server" CssClass="TextBox" Width="190px" ReadOnly="true" ></asp:TextBox>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlMiddleName" runat="server" HorizontalAlign="Left" Height="70px" Width="200px" CssClass="floatLeft" >
+                    <asp:Label ID="lblMiddleName" runat="server" Text="Middle Name" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtMiddleName" runat="server" CssClass="TextBox" Width="190px" ></asp:TextBox>
+                </asp:Panel><br />
+
+                <asp:Panel ID="pnlDateOfBirth" runat="server" HorizontalAlign="Left" Height="70px" Width="220px" CssClass="floatLeft" >
+                    <asp:Label ID="lblDateOfBirth" runat="server" Text="Date of Birth" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtDateOfBirth" runat="server" Width="200px" CssClass="TextBox" ></asp:TextBox>
+                    <ajaxToolkit:CalendarExtender ID="calexDateOfBirth"  runat="server" TargetControlID="txtDateOfBirth" />
+                </asp:Panel>
+
+                <asp:Panel ID="pnlGender" runat="server" HorizontalAlign="Left" Height="70px" Width="260px" CssClass="floatLeft" >
+                    <asp:Label ID="lblGender" runat="server" Text="Gender" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:Panel ID="pnlSubGender" runat="server" Height="28px" Width="250px" BorderColor="Gray" BorderStyle="Solid" BorderWidth="1px" style="margin-top: 3px; ">
+                        <asp:RadioButton ID="rbMale" runat="server" Text="Male" Font-Bold="false" Font-Size="Medium" Font-Names="Arial" GroupName="Gender" />
+                        <asp:RadioButton ID="rbFemale" runat="server" Text="Female" Font-Bold="false" Font-Size="Medium" Font-Names="Arial" GroupName="Gender" />
+                    </asp:Panel>
+
+                </asp:Panel>
+
+                <asp:Panel ID="pnlSSN" runat="server" HorizontalAlign="Left" Height="70px" Width="270px" CssClass="floatLeft" >
+                    <asp:Label ID="lblSSN" runat="server" Text="SSN" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtSSN" runat="server" Width="250px" CssClass="TextBox" ></asp:TextBox>
+                </asp:Panel><br />
+
+                <asp:Panel ID="pnlTelephone1" runat="server" HorizontalAlign="Left" Height="70px"  Width="245px" CssClass="floatLeft">
+                    <asp:Label ID="lblTelephone1" runat="server" Text="Telephone #1" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtTelephone1" runat="server" Width="235px" CssClass="TextBox" ></asp:TextBox>
+                </asp:Panel>
+
+                <asp:Panel ID="pn1Telephone2" runat="server" HorizontalAlign="Left" Height="70px"  Width="245px" CssClass="floatLeft">
+                    <asp:Label ID="lblTelephone2" runat="server" Text="Telephone #2" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtTelephone2" runat="server" Width="235px" CssClass="TextBox" ></asp:TextBox>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlTelephone3" runat="server" HorizontalAlign="Left" Height="70px"  Width="245px" CssClass="floatLeft">
+                    <asp:Label ID="lblTelephone3" runat="server" Text="Telephone #1" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtTelephone3" runat="server" Width="235px" CssClass="TextBox" ></asp:TextBox>
+                </asp:Panel> <br />
+
+                <asp:Panel ID="pnlAddress" runat="server"  HorizontalAlign="Left" Height="70px" Width="760px" CssClass="floatLeft" >
+                    <asp:Label ID="lblAddress" runat="server" Text="Address" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtAddress" runat="server" CssClass="TextBox" Width="740px" ></asp:TextBox>
+
+                </asp:Panel>
+
+                <asp:Panel ID="pnlZipCode" runat="server" HorizontalAlign="Left" Height="70px" Width="200px" CssClass="floatLeft" >
+                    <asp:Label ID="lblZipCode" runat="server" Text="Zip Code" CssClass="pnlLabel" ></asp:Label><br />
+                    <asp:TextBox ID="txtZipCode" runat="server" Width="180px" CssClass="TextBox" ></asp:TextBox>
+
+                </asp:Panel>
+
+                <asp:Panel ID="pnlState" runat="server" HorizontalAlign="Left" Height="70px" Width="200px"  CssClass="floatLeft" >
+                    <asp:Label ID="lblState" runat="server" Text="State" CssClass="pnlLabel" ></asp:Label>  <br />
+                    <asp:DropDownList ID="ddlState" runat="server" Width="180px" CssClass="DropDownList" ></asp:DropDownList>
+                </asp:Panel>
+
+                <asp:Panel ID="pnlCity" runat="server" HorizontalAlign="Left" Height="70px" Width="360px" CssClass="floatLeft" >
+                    <asp:Label ID="lblCity" runat="server" Text="City" CssClass="pnlLabel" ></asp:Label> <br />
+                    <asp:DropDownList ID="ddlCity" runat="server" Width="340px" CssClass="DropDownList" ></asp:DropDownList>
+                </asp:Panel>
+            </asp:Panel><br />
+            <asp:Panel ID="pnlPersonalDetailsNext" runat="server" Height="30px" Width="780px" HorizontalAlign="Right" 
+                style="border-color: gray; border-style: solid; border-width: 1px;  margin-left: auto; margin-right: auto; padding: 5px;  ">
+                <asp:Button ID="btnNext" runat="server" Text="Next" Width="100px" OnClick="btnNext_Click" style="vertical-align: bottom; margin-right: 20px; " />
+            </asp:Panel>
+        </div>
+    </form>
+</body>
+</html>

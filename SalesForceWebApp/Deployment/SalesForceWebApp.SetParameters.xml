@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="localhost" />
+  <setParameter name="DefaultConnection-Web.config Connection String" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-SalesForceWebApp-20170209111918.mdf;Initial Catalog=aspnet-SalesForceWebApp-20170209111918;Integrated Security=True" />
+</parameters>

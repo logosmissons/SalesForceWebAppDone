@@ -1,0 +1,71 @@
+﻿.topPanel {
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+}
+
+
+.pnlLabel {
+    font-family: Arial;
+    font-size: small;
+    font-weight: bold;
+    float: left;
+    /*margin-bottom: 0px;*/
+}
+
+.TextBox {
+    font-weight: normal;
+    height: 25px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.DropDownList {
+    height: 30px;
+}
+
+.floatLeft {
+    float: left;
+    font-weight: normal;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    /*border: solid gray 1px;*/
+}
+
+.modalPopup {
+    background-color: #FFFFFF;
+    width: 300px;
+    border: 3px solid #0DA9D0;
+}
+
+    .modalPopup .header {
+        background-color: #2FBDF1;
+        height: 30px;
+        color: White;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .modalPopup .body {
+        min-height: 50px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .modalPopup .footer {
+        padding: 3px;
+    }
+
+.modalBackground {
+    background-color: Black;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
